@@ -65,7 +65,7 @@ st.write(f'Mean Squared Error: {mse}')
 st.subheader('Sales Prediction Visualization:')
 fig, ax = plt.subplots(figsize=(10, 6))
 ax.scatter(X_test.index, y_test, color='black', label='Actual Sales')
-ax.plot(X_test.index, y_pred, color='blue', linewidth=3, label='Predicted Sales')
+ax.plot(X_test.index.values, y_pred, color='blue', linewidth=3, label='Predicted Sales')
 ax.set_title('Sales Prediction')
 ax.set_xlabel('Index')
 ax.set_ylabel('Sales')
@@ -84,18 +84,6 @@ ax_3d.set_zlabel('Sales')
 ax_3d.set_title('3D Sales Prediction')
 ax_3d.legend()
 st.pyplot(fig_3d)
-
-# Visualize the results
-st.subheader('Sales Prediction Visualization:')
-fig, ax = plt.subplots(figsize=(10, 6))
-ax.scatter(X_test.index, y_test, color='black', label='Actual Sales')
-ax.plot(X_test.index.values, y_pred, color='blue', linewidth=3, label='Predicted Sales')  # Use .values to get numerical values of the index
-ax.set_title('Sales Prediction')
-ax.set_xlabel('Index')
-ax.set_ylabel('Sales')
-ax.legend()
-st.pyplot(fig)
-
 
 # Provide information about using the trained model for forecasting
 st.subheader('Forecasting Future Sales:')
