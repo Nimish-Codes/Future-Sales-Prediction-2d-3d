@@ -54,7 +54,7 @@ st.write(sales_data[['Date', 'Year', 'Month', 'Day']].head(7))
 
 # Evaluate the model
 st.subheader('Model Evaluation:')
-mse = mean_squared_error(y_test, model.predict(X_test))
+mse = mean_squared_error(y_test, y_pred)
 st.write(f'Mean Squared Error: {mse}')
 
 # Visualize the results
