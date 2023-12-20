@@ -54,20 +54,8 @@ st.write(sales_data[['Date', 'Year', 'Month', 'Day']].head(7))
 
 # Evaluate the model
 st.subheader('Model Evaluation:')
-y_pred = model.predict(X_test)
-y_test_flat = y_test.values.flatten()  # Flatten y_test to a 1D array
-print("Shape of y_test:", y_test_flat.shape)
-print("Shape of y_pred:", y_pred.shape)
-
-# Display some sample values for y_test and y_pred
-st.write("Sample values of y_test:", y_test_flat[:5])
-st.write("Sample values of y_pred:", y_pred[:5])
-
-mse = mean_squared_error(y_test_flat, y_pred)
+mse = mean_squared_error(y_test, model.predict(X_test))
 st.write(f'Mean Squared Error: {mse}')
-
-
-
 
 # Visualize the results
 st.subheader('Sales Prediction Visualization:')
