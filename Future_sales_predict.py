@@ -58,8 +58,13 @@ y_pred = model.predict(X_test)
 print("Shape of y_test:", y_test.shape)
 print("Shape of y_pred:", y_pred.shape)
 
+# Display some sample values for y_test and y_pred
+st.write("Sample values of y_test:", y_test[:5].values)
+st.write("Sample values of y_pred:", y_pred[:5])
+
 mse = mean_squared_error(y_test, y_pred)
 st.write(f'Mean Squared Error: {mse}')
+
 
 
 # Visualize the results
