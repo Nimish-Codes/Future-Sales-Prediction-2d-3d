@@ -87,4 +87,4 @@ st.pyplot(fig_3d)
 
 # Provide information about using the trained model for forecasting
 st.subheader('Forecasting Future Sales:')
-st.write('Now you can use the trained model to forecast future sales by providing future dates as input features.')
+st.write('This model will be trained soon to forecast future sales by taking future dates as input from user. Stay tuned.')
